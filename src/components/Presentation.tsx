@@ -6,6 +6,9 @@ import ContentSlide from './slides/ContentSlide';
 import ComparisonSlide from './slides/ComparisonSlide';
 import TimelineSlide from './slides/TimelineSlide';
 import MetricsSlide from './slides/MetricsSlide';
+import ChartSlide from './slides/ChartSlide';
+import FrameworkSlide from './slides/FrameworkSlide';
+import MatrixSlide from './slides/MatrixSlide';
 
 const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -50,6 +53,12 @@ const Presentation = () => {
         return <TimelineSlide slide={slide} />;
       case 'metrics':
         return <MetricsSlide slide={slide} />;
+      case 'chart':
+        return <ChartSlide slide={slide} />;
+      case 'framework':
+        return <FrameworkSlide slide={slide} />;
+      case 'matrix':
+        return <MatrixSlide slide={slide} />;
       case 'content':
       default:
         return <ContentSlide slide={slide} />;
